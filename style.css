@@ -1,113 +1,248 @@
-/* Reset default margins and paddings */
+/* Reset dan font dasar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-/* Body styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #eaeaea;
-  color: #333;
-  line-height: 1.6;
-  padding: 20px;
-}
-/* Container for layout */
-.container {
-  max-width: 800px;
-  margin: auto;
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-/* Text center class */
-.text-center {
-  text-align: center;
-}
-/* Main title */
-h1 {
-  color: #2c3e50;
-  margin-bottom: 20px;
-}
-/* Profile image styles */
-img {
-  width: 150px;
-  height: 150px; /* <-- wajib sama agar bulat */
-  border-radius: 50%;
-  object-fit: cover; /* potong gambar agar pas di lingkaran */
-  margin-bottom: 20px;
-  border: 3px solid #2980b9;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Section headings */
-h2 {
-  color: #2980b9;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #2980b9;
-  padding-bottom: 5px;
+body {
+  background: #fff;
+  color: #111;
 }
-/* Blockquote styles */
-blockquote {
-  font-style: italic;
-  margin: 10px 0 20px;
-  padding: 10px;
-  background-color: #f4f4f4;
-  border-left: 5px solid #2980b9;
-  border-radius: 5px;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
-/* Table styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  margin-bottom: 60px;
 }
-th,
-td {
-  padding: 10px;
-  text-align: left;
-  border: 1px solid #ccc;
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
-th {
-  background-color: #2980b9;
-  color: white;
+
+.logo .dot {
+  width: 12px;
+  height: 12px;
+  background: #f8b400;
+  border-radius: 50%;
 }
-/* List styles */
-ul,
-ol {
-  margin: 10px 0 20px 20px; /* Indent lists */
+
+.logo h1 {
+  font-size: 18px;
+  font-weight: 600;
 }
-/* Audio player styles */
-audio {
-  display: block;
-  margin: 20px auto; /* Center audio player */
+
+.logo span {
+  color: #666;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 6px;
 }
-/* Video iframe styles */
-iframe {
-  display: block;
-  margin: 20px auto; /* Center video */
-  border: 2px solid #2980b9;
-  border-radius: 5px;
+
+nav {
+  display: flex;
+  align-items: center;
 }
-/* Link styles */
-a {
-  color: #2980b9;
-  text-decoration: none; /* Remove underline */
+
+/* gaya setiap item menu */
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 15px;
+  position: relative;
+  padding: 0 10px;
+  transition: color 0.3s ease;
 }
-a:hover {
-  text-decoration: underline; /* Underline on hover */
+
+/* warna hover */
+nav a:hover {
+  color: #f8b400;
 }
-/* Footer section */
+
+/* tambahkan garis pemisah antar menu */
+nav a:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background-color: #ccc;
+}
+
+/* Main Section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 80px;
+  gap: 30px;
+}
+
+.profile-photo {
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(30%);
+}
+
+.intro h2 {
+  font-size: 120px;
+  margin-left: -8px;
+}
+
+.intro h3 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.intro p {
+  max-width: 420px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn-yellow {
+  background-color: #f5a623;
+  color: #000;
+}
+
+.btn-red {
+  background-color: #ff4444;
+  color: #000000;
+}
+
+.btn-blue {
+  background-color: #7fdbda;
+  color: #000;
+}
+
+/* Footer */
 footer {
-  text-align: center;
-  margin: 40px 0;
-  font-size: 0.9em;
-  color: #777;
+  margin-top: 90px;
+  padding: 40px 0;
+  background-color: #fff;
+  border-top: 1px solid #e0e0e0;
 }
-/* Embed audio styles */
-.audio-embed {
-  height: 228px;
-  width: 600px;
-  margin: 20px auto;
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-item h3 {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-item p {
+  font-size: 14px;
+  color: #666;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: #f5a623;
+}
+
+.copyright {
+  text-align: right;
+}
+
+.copyright p {
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .hero-text h1 {
+    font-size: 48px;
+  }
+
+  .cta-buttons {
+    justify-content: center;
+  }
+
+  .btn {
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .copyright {
+    text-align: left;
+  }
+
+  nav {
+    gap: 15px;
+  }
 }
